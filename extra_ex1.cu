@@ -1,5 +1,3 @@
-%%writefile claude_ex1.cu
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -68,7 +66,7 @@ void cpu_scale(int *a, int *e, int scalar, int n) {
 // Function to verify results
 bool verify_results(int *a, int *b, int n) {
     for(int i = 0; i < n; i++) {
-        if(a[i] != b[i]) {
+  if(a[i] != b[i]) {
             printf("Mismatch at index %d: CPU=%d, GPU=%d\n", i, a[i], b[i]);
             return false;
         }
@@ -77,7 +75,7 @@ bool verify_results(int *a, int *b, int n) {
 }
 
 int main(){
-    int *a, *b, *c_gpu, *d_gpu, *e_gpu;
+  int *a, *b, *c_gpu, *d_gpu, *e_gpu;
     int *c_cpu, *d_cpu, *e_cpu;
     int scalar = 5;
     int *d_a, *d_b, *d_c, *d_d, *d_e;
